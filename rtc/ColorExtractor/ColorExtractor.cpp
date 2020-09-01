@@ -174,7 +174,7 @@ RTC::ReturnCode_t ColorExtractor::onExecute(RTC::UniqueId ec_id)
         cx /= npixel;
         cy /= npixel;
         //printf("cx=%d, cy=%d, npixel=%d\n", cx, cy, npixel);
-        cvCircle(m_img, cvPoint(cx, cy), sqrt(npixel), CV_RGB(0,0,255), 6, 8, 0);
+        cvCircle(m_img, cvPoint(cx, cy), sqrt(npixel), cv::Scalar(0,0,255), 6, 8, 0);
         m_pos.tm = m_original.tm;
         m_pos.data.x = cx;
         m_pos.data.y = cy;
